@@ -2,7 +2,7 @@
 const form = document.getElementById('survey-form');
 const successMsg = document.getElementById('success-msg');
 
-// Уникальный URL Formspree для вашего опроса
+// НОВЫЙ УНИКАЛЬНЫЙ URL Formspree для вашего опроса
 const FORMSPREE_URL = 'https://formspree.io/f/mblpvvlr'; 
 
 form.addEventListener('submit', async (e) => {
@@ -10,18 +10,15 @@ form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   // Получаем ответы с помощью FormData. 
-  // FormData автоматически собирает все поля с атрибутом 'name'.
   const formData = new FormData(form);
   
-  // *** СТАРЫЙ КОД (localStorage) УДАЛЕН И ЗАМЕНЕН НА ОТПРАВКУ В СЕТЬ ***
-
   try {
     // 2. ОТПРАВКА ДАННЫХ НА FORMSPREE
     const response = await fetch(FORMSPREE_URL, {
         method: 'POST', // Formspree ожидает метод POST
         body: formData, // Отправляем собранные данные
         headers: {
-            'Accept': 'application/json' // Указываем, что ждем JSON-ответ
+            'Accept': 'application/json' 
         }
     });
 
@@ -33,12 +30,13 @@ form.addEventListener('submit', async (e) => {
         // Показ сообщения об успехе
         successMsg.innerText = "Спасибо! Ваши ответы получены.";
         successMsg.style.display = 'block';
+        successMsg.style.backgroundColor = '#d4edda'; // Цвет успеха
         setTimeout(() => successMsg.style.display = 'none', 3000);
 
     } else {
-        // Ошибка, полученная от Formspree (например, невалидные данные)
+        // Ошибка, полученная от Formspree
         const result = await response.json();
-        const errorMessage = result.error || 'Произошла ошибка при отправке данных. Попробуйте еще раз.';
+        const errorMessage = result.error || 'Произошла ошибка при отправке данных. Проверьте введенные данные.';
         
         // Показ сообщения об ошибке
         successMsg.innerText = errorMessage;
@@ -62,4 +60,3 @@ form.addEventListener('submit', async (e) => {
     }, 5000);
   }
 });
-
