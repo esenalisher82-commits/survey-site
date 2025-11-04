@@ -3,7 +3,7 @@ const form = document.getElementById('survey-form');
 const successMsg = document.getElementById('success-msg');
 
 // Уникальный URL Formspree для вашего опроса
-const FORMSPREE_URL = 'https://formspree.io/f/xanlgzge'; 
+const FORMSPREE_URL = 'https://formspree.io/f/mblpvvlr'; 
 
 form.addEventListener('submit', async (e) => {
   // Предотвращаем стандартную отправку формы и перезагрузку страницы
@@ -62,3 +62,4 @@ form.addEventListener('submit', async (e) => {
     }, 5000);
   }
 });
+
