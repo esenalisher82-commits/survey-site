@@ -1,27 +1,58 @@
 body {
-  font-family: sans-serif;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
-.container {
-  background: white;
-  padding: 20px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 400px;
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-button {
-  background: #007BFF;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 8px;
-  cursor: pointer;
+h1, h2, h3 {
+    color: #333;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 30px;
 }
-button:hover {
-  background: #0056b3;
+
+/* Стиль для каждого блока вопроса */
+.question-block {
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Стиль для меток вопросов */
+.question-block p, .question-block label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Стиль для полей ввода (текст, textarea) */
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box; /* Важно для корректной ширины */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Стиль для чекбоксов и радио-кнопок */
+.question-block input[type="radio"], .question-block input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.question-block label[for] {
+    font-weight: normal; /* Сделать метки вариантов ответа нежирными */
+    display: inline-block;
+    margin-bottom: 5px;
 }
