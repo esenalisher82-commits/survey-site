@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Опрос студентов</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Опрос студентов</h1>
+    <p>Ответь на несколько вопросов, чтобы помочь выявить общие проблемы.</p>
+    <form id="survey-form">
+      <label>Что чаще всего мешает тебе учиться?</label><br>
+      <select name="problem" required>
+        <option value="">Выбери вариант</option>
+        <option value="стресс">Стресс</option>
+        <option value="недосып">Недосып</option>
+        <option value="непонимание материала">Непонимание материала</option>
+        <option value="мало времени">Мало времени</option>
+      </select><br><br>
+
+      <label>Как часто ты чувствуешь усталость?</label><br>
+      <input type="radio" name="tiredness" value="часто" required> Часто<br>
+      <input type="radio" name="tiredness" value="иногда"> Иногда<br>
+      <input type="radio" name="tiredness" value="редко"> Редко<br><br>
+
+      <button type="submit">Отправить</button>
+    </form>
+
+    <p id="success-msg" style="display:none;">Спасибо за участие!</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
