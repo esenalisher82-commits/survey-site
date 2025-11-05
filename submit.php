@@ -1,5 +1,6 @@
 <?php
 // submit.php
+// Обработчик формы, который записывает данные в файл responses.csv
 
 // 1. Проверяем, что запрос пришел методом POST (отправка формы)
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -8,17 +9,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file = 'responses.csv';
 
     // 3. Собираем данные формы
-    // Игнорируем стандартные поля (как gender, heard_ei и т.д.) и преобразуем их
     
     // Получаем текущую дату и время
     $timestamp = date("Y-m-d H:i:s");
     
-    // Создаем массив данных. Мы берем только те поля, которые остались в упрощенной форме.
+    // Создаем массив данных. Используем implode для объединения значений из чекбоксов (ei_definition, ei_situations, ei_qualities, ei_development_forms).
+    // Оператор ?? '' гарантирует, что если поле не было отправлено (например, если чекбоксы не выбраны), будет пустая строка, а не ошибка.
     $data_array = [
         $timestamp,
         $_POST['gender'] ?? '',
         $_POST['heard_ei'] ?? '',
-        // Чекбоксы: объединяем выбранные значения в одну строку через запятую
         implode(', ', $_POST['ei_definition'] ?? []),
         $_POST['ei_important'] ?? '',
         implode(', ', $_POST['ei_situations'] ?? []),
@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         implode(', ', $_POST['ei_development_forms'] ?? [])
     ];
 
-    // 4. Определение заголовков CSV (если файл пуст)
+    // 4. Определение заголовков CSV (если файл responses.csv еще не существует или пуст)
     if (!file_exists($file) || filesize($file) == 0) {
         $header = [
             'ВремяОтправки', 'Пол', 'Слышали_ЭИ', 'Понимание_ЭИ', 'Важность_ЭИ',
@@ -48,10 +48,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // 5. Запись данных в файл CSV
     $fp = fopen($file, 'a');
+    // fputcsv автоматически обрабатывает кавычки и запятые для CSV
     fputcsv($fp, $data_array);
     fclose($fp);
     
     // 6. Перенаправление обратно на опросник с сообщением об успехе
+    // Этот параметр будет пойман script.js
     header("Location: index.html?status=success");
     exit();
 }
