@@ -18,7 +18,9 @@
         <p>Опрос анонимный. Ответьте, пожалуйста, на вопросы, выбрав один или несколько вариантов ответов. Ваше мнение важно для исследования!</p>
     </section>
 
-    <form id="survey-form">
+    <form action="submit.php" method="POST">
+        <div id="success-msg" style="display: none; ... "></div> 
+    </form>
         
         <div id="success-msg" style="display: none; padding: 10px; margin-bottom: 20px; border-radius: 5px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;"></div>
 
@@ -227,3 +229,4 @@
 </main>
 </body>
 </html>
+
