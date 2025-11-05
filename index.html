@@ -1,263 +1,255 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <title>Опрос студентов</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Опрос студентов</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Анкета для студентов: «Эмоциональный интеллект как компонент профессиональной культуры будущего инженера»</h1>
-    
-    <section>
-        <h2>СОЦИОЛОГИЧЕСКИЙ ОПРОС</h2>
-        <p><strong>Тема исследования:</strong> Эмоциональный интеллект как компонент профессиональной культуры будущего инженера</p>
-        <p><strong>Цель опроса:</strong> выявить уровень развития эмоционального интеллекта студентов технических специальностей и его влияние на формирование профессиональной культуры инженера.</p>
-        
-        <h3>Инструкция:</h3>
-        <p>Опрос анонимный. Ответьте, пожалуйста, на вопросы, выбрав один или несколько вариантов ответов. Ваше мнение важно для исследования!</p>
-    </section>
+  <main>
+    <h1>Анкета для студентов: «Эмоциональный интеллект как компонент профессиональной культуры будущего инженера»</h1>
+    
+    <section>
+        <h2>СОЦИОЛОГИЧЕСКИЙ ОПРОС</h2>
+        <p><strong>Тема исследования:</strong> Эмоциональный интеллект как компонент профессиональной культуры будущего инженера</p>
+        <p><strong>Цель опроса:</strong> выявить уровень развития эмоционального интеллекта студентов технических специальностей и его влияние на формирование профессиональной культуры инженера.</p>
+        
+        <h3>Инструкция:</h3>
+        <p>Опрос анонимный. Ответьте, пожалуйста, на вопросы, выбрав один или несколько вариантов ответов. Ваше мнение важно для исследования!</p>
+    </section>
 
-    <form id="survey-form">
-        
-        <div id="success-msg" style="display: none; padding: 10px; margin-bottom: 20px; border-radius: 5px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;"></div>
+    <form id="survey-form">
+        
+        <div id="success-msg" style="display: none; padding: 10px; margin-bottom: 20px; border-radius: 5px; background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;"></div>
 
-        <h2>I. Общие сведения</h2>
+        <h2>I. Общие сведения</h2>
 
-        <div class="question-block">
-            <label for="direction">1. Ваше направление подготовки (образовательная программа):</label>
-            <input type="text" id="direction" name="direction" required>
-            <label for="user_email">3. Ваша электронная почта:</label>
-            <input type="email" id="user_email" name="_replyto" required>
-        </div>
+        <div class="question-block">
+            <label for="direction">1. Ваше направление подготовки (образовательная программа):</label>
+            <input type="text" id="direction" name="direction" required>
+            <label for="user_email">3. Ваша электронная почта:</label>
+            <input type="email" id="user_email" name="_replyto" required>
+        </div>
 
-        <div class="question-block">
-            <p>2. Пол:</p>
-            <input type="radio" id="male" name="gender" value="Мужской" required>
-            <label for="male">Мужской</label><br>
-            
-            <input type="radio" id="female" name="gender" value="Женский">
-            <label for="female">Женский</label><br>
-            
-            <input type="radio" id="prefer_not_say" name="gender" value="Предпочитаю не указывать">
-            <label for="prefer_not_say">Предпочитаю не указывать</label>
-        </div>
+        <div class="question-block">
+            <p>2. Пол:</p>
+            <input type="radio" id="male" name="gender" value="Мужской" required>
+            <label for="male">Мужской</label><br>
+            
+            <input type="radio" id="female" name="gender" value="Женский">
+            <label for="female">Женский</label><br>
+            
+            <input type="radio" id="prefer_not_say" name="gender" value="Предпочитаю не указывать">
+            <label for="prefer_not_say">Предпочитаю не указывать</label>
+        </div>
 
-        <h2>II. Отношение к эмоциональному интеллекту</h2>
+        <h2>II. Отношение к эмоциональному интеллекту</h2>
 
-        <div class="question-block">
-            <p>4. Слышали ли Вы ранее о понятии «эмоциональный интеллект»?</p>
-            <input type="radio" id="heard_yes" name="heard_ei" value="Да" required>
-            <label for="heard_yes">Да</label><br>
-            
-            <input type="radio" id="heard_no" name="heard_ei" value="Нет">
-            <label for="heard_no">Нет</label><br>
-            
-            <input type="radio" id="heard_difficult" name="heard_ei" value="Затрудняюсь ответить">
-            <label for="heard_difficult">Затрудняюсь ответить</label>
-        </div>
+        <div class="question-block">
+            <p>4. Слышали ли Вы ранее о понятии «эмоциональный интеллект»?</p>
+            <input type="radio" id="heard_yes" name="heard_ei" value="Да" required>
+            <label for="heard_yes">Да</label><br>
+            
+            <input type="radio" id="heard_no" name="heard_ei" value="Нет">
+            <label for="heard_no">Нет</label><br>
+            
+            <input type="radio" id="heard_difficult" name="heard_ei" value="Затрудняюсь ответить">
+            <label for="heard_difficult">Затрудняюсь ответить</label>
+        </div>
 
-        <div class="question-block">
-            <p>5. Как Вы понимаете термин «эмоциональный интеллект»? (Можно выбрать несколько)</p>
-            <input type="checkbox" id="ei_definition_1" name="ei_definition[]" value="Способность управлять своими эмоциями">
-            <label for="ei_definition_1">Способность управлять своими эмоциями</label><br>
-            
-            <input type="checkbox" id="ei_definition_2" name="ei_definition[]" value="Умение понимать эмоции других">
-            <label for="ei_definition_2">Умение понимать эмоции других</label><br>
-            
-            <input type="checkbox" id="ei_definition_3" name="ei_definition[]" value="Средство для успешного общения и работы в коллективе">
-            <label for="ei_definition_3">Средство для успешного общения и работы в коллективе</label><br>
-            
-            <label for="ei_definition_other">Другое (укажите):</label>
-            <input type="text" id="ei_definition_other" name="ei_definition_other">
-        </div>
+        <div class="question-block">
+            <p>5. Как Вы понимаете термин «эмоциональный интеллект»? (Можно выбрать несколько)</p>
+            <input type="checkbox" id="ei_definition_1" name="ei_definition[]" value="Способность управлять своими эмоциями">
+            <label for="ei_definition_1">Способность управлять своими эмоциями</label><br>
+            
+            <input type="checkbox" id="ei_definition_2" name="ei_definition[]" value="Умение понимать эмоции других">
+            <label for="ei_definition_2">Умение понимать эмоции других</label><br>
+            
+            <input type="checkbox" id="ei_definition_3" name="ei_definition[]" value="Средство для успешного общения и работы в коллективе">
+            <label for="ei_definition_3">Средство для успешного общения и работы в коллективе</label><br>
+            
+        </div>
 
-        <div class="question-block">
-            <p>6. Считаете ли Вы эмоциональный интеллект важным качеством для будущего инженера?</p>
-            <input type="radio" id="ei_important_1" name="ei_important" value="Да, безусловно" required>
-            <label for="ei_important_1">Да, безусловно</label><br>
-            
-            <input type="radio" id="ei_important_2" name="ei_important" value="Скорее да">
-            <label for="ei_important_2">Скорее да</label><br>
-            
-            <input type="radio" id="ei_important_3" name="ei_important" value="Скорее нет">
-            <label for="ei_important_3">Скорее нет</label><br>
-            
-            <input type="radio" id="ei_important_4" name="ei_important" value="Нет">
-            <label for="ei_important_4">Нет</label>
-        </div>
+        <div class="question-block">
+            <p>6. Считаете ли Вы эмоциональный интеллект важным качеством для будущего инженера?</p>
+            <input type="radio" id="ei_important_1" name="ei_important" value="Да, безусловно" required>
+            <label for="ei_important_1">Да, безусловно</label><br>
+            
+            <input type="radio" id="ei_important_2" name="ei_important" value="Скорее да">
+            <label for="ei_important_2">Скорее да</label><br>
+            
+            <input type="radio" id="ei_important_3" name="ei_important" value="Скорее нет">
+            <label for="ei_important_3">Скорее нет</label><br>
+            
+            <input type="radio" id="ei_important_4" name="ei_important" value="Нет">
+            <label for="ei_important_4">Нет</label>
+        </div>
 
-        <div class="question-block">
-            <p>7. В каких профессиональных ситуациях, на Ваш взгляд, проявляется эмоциональный интеллект инженера? (Можно выбрать несколько)</p>
-            <input type="checkbox" id="ei_situations_1" name="ei_situations[]" value="В общении с коллегами">
-            <label for="ei_situations_1">В общении с коллегами</label><br>
-            
-            <input type="checkbox" id="ei_situations_2" name="ei_situations[]" value="В решении конфликтов">
-            <label for="ei_situations_2">В решении конфликтов</label><br>
-            
-            <input type="checkbox" id="ei_situations_3" name="ei_situations[]" value="В управлении проектами">
-            <label for="ei_situations_3">В управлении проектами</label><br>
-            
-            <input type="checkbox" id="ei_situations_4" name="ei_situations[]" value="В стрессовых ситуациях">
-            <label for="ei_situations_4">В стрессовых ситуациях</label><br>
-            
-            <label for="ei_situations_other">Другое (укажите):</label>
-            <input type="text" id="ei_situations_other" name="ei_situations_other">
-        </div>
-        
-        <h2>III. Самооценка развития эмоционального интеллекта</h2>
+        <div class="question-block">
+            <p>7. В каких профессиональных ситуациях, на Ваш взгляд, проявляется эмоциональный интеллект инженера? (Можно выбрать несколько)</p>
+            <input type="checkbox" id="ei_situations_1" name="ei_situations[]" value="В общении с коллегами">
+            <label for="ei_situations_1">В общении с коллегами</label><br>
+            
+            <input type="checkbox" id="ei_situations_2" name="ei_situations[]" value="В решении конфликтов">
+            <label for="ei_situations_2">В решении конфликтов</label><br>
+            
+            <input type="checkbox" id="ei_situations_3" name="ei_situations[]" value="В управлении проектами">
+            <label for="ei_situations_3">В управлении проектами</label><br>
+            
+            <input type="checkbox" id="ei_situations_4" name="ei_situations[]" value="В стрессовых ситуациях">
+            <label for="ei_situations_4">В стрессовых ситуациях</label><br>
+            
+        </div>
+        
+        <h2>III. Самооценка развития эмоционального интеллекта</h2>
 
-        <div class="question-block">
-            <p>8. Умеете ли Вы распознавать свои эмоции и контролировать их проявления?</p>
-            <input type="radio" id="self_control_1" name="self_control" value="Да" required>
-            <label for="self_control_1">Да</label><br>
-            
-            <input type="radio" id="self_control_2" name="self_control" value="Частично">
-            <label for="self_control_2">Частично</label><br>
-            
-            <input type="radio" id="self_control_3" name="self_control" value="Нет">
-            <label for="self_control_3">Нет</label>
-        </div>
+        <div class="question-block">
+            <p>8. Умеете ли Вы распознавать свои эмоции и контролировать их проявления?</p>
+            <input type="radio" id="self_control_1" name="self_control" value="Да" required>
+            <label for="self_control_1">Да</label><br>
+            
+            <input type="radio" id="self_control_2" name="self_control" value="Частично">
+            <label for="self_control_2">Частично</label><br>
+            
+            <input type="radio" id="self_control_3" name="self_control" value="Нет">
+            <label for="self_control_3">Нет</label>
+        </div>
 
-        <div class="question-block">
-            <p>9. Насколько легко Вам понять эмоциональное состояние других людей (по мимике, тону, поведению)?</p>
-            <input type="radio" id="empathy_level_1" name="empathy_level" value="Очень легко" required>
-            <label for="empathy_level_1">Очень легко</label><br>
-            
-            <input type="radio" id="empathy_level_2" name="empathy_level" value="Иногда">
-            <label for="empathy_level_2">Иногда</label><br>
-            
-            <input type="radio" id="empathy_level_3" name="empathy_level" value="Сложно">
-            <label for="empathy_level_3">Сложно</label><br>
-            
-            <input type="radio" id="empathy_level_4" name="empathy_level" value="Никогда не задумывался(-ась)">
-            <label for="empathy_level_4">Никогда не задумывался(-ась)</label>
-        </div>
+        <div class="question-block">
+            <p>9. Насколько легко Вам понять эмоциональное состояние других людей (по мимике, тону, поведению)?</p>
+            <input type="radio" id="empathy_level_1" name="empathy_level" value="Очень легко" required>
+            <label for="empathy_level_1">Очень легко</label><br>
+            
+            <input type="radio" id="empathy_level_2" name="empathy_level" value="Иногда">
+            <label for="empathy_level_2">Иногда</label><br>
+            
+            <input type="radio" id="empathy_level_3" name="empathy_level" value="Сложно">
+            <label for="empathy_level_3">Сложно</label><br>
+            
+            <input type="radio" id="empathy_level_4" name="empathy_level" value="Никогда не задумывался(-ась)">
+            <label for="empathy_level_4">Никогда не задумывался(-ась)</label>
+        </div>
 
-        <div class="question-block">
-            <p>10. Как часто Вы стараетесь учитывать эмоции других при взаимодействии (в команде, с преподавателями и т.д.)?</p>
-            <input type="radio" id="account_emotions_1" name="account_emotions" value="Всегда" required>
-            <label for="account_emotions_1">Всегда</label><br>
-            
-            <input type="radio" id="account_emotions_2" name="account_emotions" value="Часто">
-            <label for="account_emotions_2">Часто</label><br>
-            
-            <input type="radio" id="account_emotions_3" name="account_emotions" value="Редко">
-            <label for="account_emotions_3">Редко</label><br>
-            
-            <input type="radio" id="account_emotions_4" name="account_emotions" value="Никогда">
-            <label for="account_emotions_4">Никогда</label>
-        </div>
+        <div class="question-block">
+            <p>10. Как часто Вы стараетесь учитывать эмоции других при взаимодействии (в команде, с преподавателями и т.д.)?</p>
+            <input type="radio" id="account_emotions_1" name="account_emotions" value="Всегда" required>
+            <label for="account_emotions_1">Всегда</label><br>
+            
+            <input type="radio" id="account_emotions_2" name="account_emotions" value="Часто">
+            <label for="account_emotions_2">Часто</label><br>
+            
+            <input type="radio" id="account_emotions_3" name="account_emotions" value="Редко">
+            <label for="account_emotions_3">Редко</label><br>
+            
+            <input type="radio" id="account_emotions_4" name="account_emotions" value="Никогда">
+            <label for="account_emotions_4">Никогда</label>
+        </div>
 
-        <div class="question-block">
-            <p>11. Используете ли Вы методы саморегуляции (дыхательные упражнения, переключение внимания, паузы и др.) для контроля эмоций?</p>
-            <input type="radio" id="self_regulation_1" name="self_regulation" value="Да, регулярно" required>
-            <label for="self_regulation_1">Да, регулярно</label><br>
-            
-            <input type="radio" id="self_regulation_2" name="self_regulation" value="Иногда">
-            <label for="self_regulation_2">Иногда</label><br>
-            
-            <input type="radio" id="self_regulation_3" name="self_regulation" value="Нет">
-            <label for="self_regulation_3">Нет</label>
-        </div>
-        
-        <h2>IV. Эмоциональный интеллект и профессиональная культура</h2>
+        <div class="question-block">
+            <p>11. Используете ли Вы методы саморегуляции (дыхательные упражнения, переключение внимания, паузы и др.) для контроля эмоций?</p>
+            <input type="radio" id="self_regulation_1" name="self_regulation" value="Да, регулярно" required>
+            <label for="self_regulation_1">Да, регулярно</label><br>
+            
+            <input type="radio" id="self_regulation_2" name="self_regulation" value="Иногда">
+            <label for="self_regulation_2">Иногда</label><br>
+            
+            <input type="radio" id="self_regulation_3" name="self_regulation" value="Нет">
+            <label for="self_regulation_3">Нет</label>
+        </div>
+        
+        <h2>IV. Эмоциональный интеллект и профессиональная культура</h2>
 
-        <div class="question-block">
-            <p>12. Считаете ли Вы, что эмоциональный интеллект способствует формированию профессиональной культуры инженера (этики, коммуникации, ответственности)?</p>
-            <input type="radio" id="ei_promotes_culture_1" name="ei_promotes_culture" value="Да" required>
-            <label for="ei_promotes_culture_1">Да</label><br>
-            
-            <input type="radio" id="ei_promotes_culture_2" name="ei_promotes_culture" value="Скорее да">
-            <label for="ei_promotes_culture_2">Скорее да</label><br>
-            
-            <input type="radio" id="ei_promotes_culture_3" name="ei_promotes_culture" value="Скорее нет">
-            <label for="ei_promotes_culture_3">Скорее нет</label><br>
-            
-            <input type="radio" id="ei_promotes_culture_4" name="ei_promotes_culture" value="Нет">
-            <label for="ei_promotes_culture_4">Нет</label>
-        </div>
+        <div class="question-block">
+            <p>12. Считаете ли Вы, что эмоциональный интеллект способствует формированию профессиональной культуры инженера (этики, коммуникации, ответственности)?</p>
+            <input type="radio" id="ei_promotes_culture_1" name="ei_promotes_culture" value="Да" required>
+            <label for="ei_promotes_culture_1">Да</label><br>
+            
+            <input type="radio" id="ei_promotes_culture_2" name="ei_promotes_culture" value="Скорее да">
+            <label for="ei_promotes_culture_2">Скорее да</label><br>
+            
+            <input type="radio" id="ei_promotes_culture_3" name="ei_promotes_culture" value="Скорее нет">
+            <label for="ei_promotes_culture_3">Скорее нет</label><br>
+            
+            <input type="radio" id="ei_promotes_culture_4" name="ei_promotes_culture" value="Нет">
+            <label for="ei_promotes_culture_4">Нет</label>
+        </div>
 
-        <div class="question-block">
-            <p>13. Какие качества, на Ваш взгляд, связаны с высоким уровнем эмоционального интеллекта инженера? (Можно выбрать несколько вариантов)</p>
-            <input type="checkbox" id="ei_qualities_1" name="ei_qualities[]" value="Эмпатия">
-            <label for="ei_qualities_1">Эмпатия</label><br>
-            
-            <input type="checkbox" id="ei_qualities_2" name="ei_qualities[]" value="Самоконтроль">
-            <label for="ei_qualities_2">Самоконтроль</label><br>
-            
-            <input type="checkbox" id="ei_qualities_3" name="ei_qualities[]" value="Ответственность">
-            <label for="ei_qualities_3">Ответственность</label><br>
-            
-            <input type="checkbox" id="ei_qualities_4" name="ei_qualities[]" value="Умение работать в команде">
-            <label for="ei_qualities_4">Умение работать в команде</label><br>
-            
-            <input type="checkbox" id="ei_qualities_5" name="ei_qualities[]" value="Креативность">
-            <label for="ei_qualities_5">Креативность</label><br>
-            
-            <input type="checkbox" id="ei_qualities_6" name="ei_qualities[]" value="Лидерство">
-            <label for="ei_qualities_6">Лидерство</label>
-        </div>
+        <div class="question-block">
+            <p>13. Какие качества, на Ваш взгляд, связаны с высоким уровнем эмоционального интеллекта инженера? (Можно выбрать несколько вариантов)</p>
+            <input type="checkbox" id="ei_qualities_1" name="ei_qualities[]" value="Эмпатия">
+            <label for="ei_qualities_1">Эмпатия</label><br>
+            
+            <input type="checkbox" id="ei_qualities_2" name="ei_qualities[]" value="Самоконтроль">
+            <label for="ei_qualities_2">Самоконтроль</label><br>
+            
+            <input type="checkbox" id="ei_qualities_3" name="ei_qualities[]" value="Ответственность">
+            <label for="ei_qualities_3">Ответственность</label><br>
+            
+            <input type="checkbox" id="ei_qualities_4" name="ei_qualities[]" value="Умение работать в команде">
+            <label for="ei_qualities_4">Умение работать в команде</label><br>
+            
+            <input type="checkbox" id="ei_qualities_5" name="ei_qualities[]" value="Креативность">
+            <label for="ei_qualities_5">Креативность</label><br>
+            
+            <input type="checkbox" id="ei_qualities_6" name="ei_qualities[]" value="Лидерство">
+            <label for="ei_qualities_6">Лидерство</label>
+        </div>
 
-        <div class="question-block">
-            <p>14. Нужно ли, по Вашему мнению, включить развитие эмоционального интеллекта в программы подготовки инженеров?</p>
-            <input type="radio" id="include_in_program_1" name="include_in_program" value="Да" required>
-            <label for="include_in_program_1">Да</label><br>
-            
-            <input type="radio" id="include_in_program_2" name="include_in_program" value="Скорее да">
-            <label for="include_in_program_2">Скорее да</label><br>
-            
-            <input type="radio" id="include_in_program_3" name="include_in_program" value="Скорее нет">
-            <label for="include_in_program_3">Скорее нет</label><br>
-            
-            <input type="radio" id="include_in_program_4" name="include_in_program" value="Нет">
-            <label for="include_in_program_4">Нет</label>
-        </div>
+        <div class="question-block">
+            <p>14. Нужно ли, по Вашему мнению, включить развитие эмоционального интеллекта в программы подготовки инженеров?</p>
+            <input type="radio" id="include_in_program_1" name="include_in_program" value="Да" required>
+            <label for="include_in_program_1">Да</label><br>
+            
+            <input type="radio" id="include_in_program_2" name="include_in_program" value="Скорее да">
+            <label for="include_in_program_2">Скорее да</label><br>
+            
+            <input type="radio" id="include_in_program_3" name="include_in_program" value="Скорее нет">
+            <label for="include_in_program_3">Скорее нет</label><br>
+            
+            <input type="radio" id="include_in_program_4" name="include_in_program" value="Нет">
+            <label for="include_in_program_4">Нет</label>
+        </div>
 
-        <div class="question-block">
-            <p>15. Какие формы работы, по Вашему мнению, наиболее эффективны для развития эмоционального интеллекта студентов? (Можно выбрать несколько)</p>
-            <input type="checkbox" id="ei_development_forms_1" name="ei_development_forms[]" value="Тренинги и мастер-классы">
-            <label for="ei_development_forms_1">Тренинги и мастер-классы</label><br>
-            
-            <input type="checkbox" id="ei_development_forms_2" name="ei_development_forms[]" value="Деловые игры, кейсы">
-            <label for="ei_development_forms_2">Деловые игры, кейсы</label><br>
-            
-            <input type="checkbox" id="ei_development_forms_3" name="ei_development_forms[]" value="Психологические тесты и самодиагностика">
-            <label for="ei_development_forms_3">Психологические тесты и самодиагностика</label><br>
-            
-            <input type="checkbox" id="ei_development_forms_4" name="ei_development_forms[]" value="Курсы по soft skills">
-            <label for="ei_development_forms_4">Курсы по soft skills</label><br>
-            
-            <label for="ei_development_forms_other">Другое:</label>
-            <input type="text" id="ei_development_forms_other" name="ei_development_forms_other">
-        </div>
-        
-        <h2>V. Открытые вопросы</h2>
+        <div class="question-block">
+            <p>15. Какие формы работы, по Вашему мнению, наиболее эффективны для развития эмоционального интеллекта студентов? (Можно выбрать несколько)</p>
+            <input type="checkbox" id="ei_development_forms_1" name="ei_development_forms[]" value="Тренинги и мастер-классы">
+            <label for="ei_development_forms_1">Тренинги и мастер-классы</label><br>
+            
+            <input type="checkbox" id="ei_development_forms_2" name="ei_development_forms[]" value="Деловые игры, кейсы">
+            <label for="ei_development_forms_2">Деловые игры, кейсы</label><br>
+            
+            <input type="checkbox" id="ei_development_forms_3" name="ei_development_forms[]" value="Психологические тесты и самодиагностика">
+            <label for="ei_development_forms_3">Психологические тесты и самодиагностика</label><br>
+            
+            <input type="checkbox" id="ei_development_forms_4" name="ei_development_forms[]" value="Курсы по soft skills">
+            <label for="ei_development_forms_4">Курсы по soft skills</label><br>
+        </div>
+        
+        <h2>V. Открытые вопросы</h2>
 
-        <div class="question-block">
-            <label for="frequent_emotions">16. Какие эмоции чаще всего возникают у Вас при выполнении учебных проектов или в инженерной команде?</label>
-            <textarea id="frequent_emotions" name="frequent_emotions" rows="4" required></textarea>
-        </div>
+        <div class="question-block">
+            <label for="frequent_emotions">16. Какие эмоции чаще всего возникают у Вас при выполнении учебных проектов или в инженерной команде?</label>
+            <textarea id="frequent_emotions" name="frequent_emotions" rows="4" required></textarea>
+        </div>
 
-        <div class="question-block">
-            <label for="ei_obstacles">17. Что, по Вашему мнению, мешает развитию эмоционального интеллекта у студентов технических специальностей?</label>
-            <textarea id="ei_obstacles" name="ei_obstacles" rows="4" required></textarea>
-        </div>
+        <div class="question-block">
+            <label for="ei_obstacles">17. Что, по Вашему мнению, мешает развитию эмоционального интеллекта у студентов технических специальностей?</label>
+            <textarea id="ei_obstacles" name="ei_obstacles" rows="4" required></textarea>
+        </div>
 
-        <div class="question-block">
-            <label for="ei_proposals">18. Ваши предложения по повышению уровня эмоционального интеллекта студентов инженерных направлений:</label>
-            <textarea id="ei_proposals" name="ei_proposals" rows="4" required></textarea>
-        </div>
+        <div class="question-block">
+            <label for="ei_proposals">18. Ваши предложения по повышению уровня эмоционального интеллекта студентов инженерных направлений:</label>
+            <textarea id="ei_proposals" name="ei_proposals" rows="4" required></textarea>
+        </div>
 
-        <div style="margin-top: 30px;">
-            <button type="submit" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Благодарю за участие! Отправить ответы</button>
-        </div>
-        
-        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">Результаты будут использованы для НИРС «Эмоциональный интеллект как компонент профессиональной культуры будущего инженера».</p>
+        <div style="margin-top: 30px;">
+            <button type="submit" style="padding: 10px 20px; font-size: 16px; cursor: pointer;">Благодарю за участие! Отправить ответы</button>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 0.9em; color: #666;">Результаты будут использованы для НИРС «Эмоциональный интеллект как компонент профессиональной культуры будущего инженера».</p>
 
-    </form>
+    </form>
 </main>
 </body>
 </html>
-
-
+"
