@@ -1,27 +1,7 @@
-<form method="POST" accept-charset="UTF-8" id="form">
-    <input type="email" name="email" placeholder="Your email">
-    <input type="text" name="full-name" placeholder="Your name">
-    <!-- add hidden Honeypot input to prevent spams -->
-    <input type="hidden" name="_gotcha" style="display:none !important">
-    <button type="submit">Send</button>
+<form action="https://getform.io/f/bejekmla" method="POST" enctype="multipart/form-data">
+   <input type="file" name="file">
+   <input type="text" name="full-name" placeholder="Your name">
+   <!-- add hidden Honeypot input to prevent spams -->
+   <input type="hidden" name="_gotcha" style="display:none !important">
+   <button type="submit">Send</button>
 </form>
-
-<script>
-    const form = document.getElementById("form");
-    form.addEventListener("submit", formSubmit);
-
-    function formSubmit(e) {
-        e.preventDefault();
-        const formData = new FormData(e.target);
-
-        fetch("https://getform.io/f/bejekmla", {
-            method: "POST",
-            body: formData,
-            headers: {
-                "Accept": "application/json",
-            },
-        })
-        .then(response => console.log(response))
-        .catch(error => console.log(error))
-    }
-</script>
