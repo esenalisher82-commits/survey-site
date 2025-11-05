@@ -1,20 +1,16 @@
-<form action="https://getform.io/f/bejekmla" method="POST">
-    <input type="text" name="name">
-    <input type="email" name="email">
-    <input type="text" name="message">
-    <!-- add hidden Honeypot input to prevent spams -->
-    <input type="hidden" name="_gotcha" style="display:none !important">
-    <!-- checkbox handle -->
-    <input type="checkbox" name="subscribe" value="yes" checked>
-    <input type="hidden" name="subscribe" value="no">
-    <!-- radio button handle -->
-    <input type="radio" name="gender" value="male" checked>
-    <input type="radio" name="gender" value="female">
-    <input type="radio" name="gender" value="other">
-    <!-- select field handle -->
-    <select name="work-experience">
-        <option value="one-year">0-1 years</option>
-        <option value="one-five-years">1-5 years</option>
-    </select>
-    <button type="submit">Send</button>
-</form>
+// script.js (Вам нужно будет создать этот файл заново или очистить старый)
+
+const successMsg = document.getElementById('success-msg');
+const urlParams = new URLSearchParams(window.location.search);
+
+if (urlParams.get('status') === 'success') {
+    successMsg.innerText = "Спасибо! Ваши ответы успешно сохранены на сервере.";
+    successMsg.style.display = 'block';
+    successMsg.style.backgroundColor = '#d4edda';
+    
+    // Удаляем параметр из URL, чтобы сообщение не показывалось при перезагрузке
+    setTimeout(() => {
+        history.pushState(null, null, window.location.pathname);
+        successMsg.style.display = 'none';
+    }, 5000);
+}
